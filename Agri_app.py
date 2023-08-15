@@ -124,8 +124,7 @@ Agrigravity Technologies Private Limited's Corporate Identification Number is (C
 
                 st.write(user_input_data)
                 st.subheader("Predicted Price (Per KG)")
-                data = np.array(feature_list)
-                data = data.reshape(1, -1)
+                data = np.array(feature_list).reshape(1, -1)
                 model = load_model("final_model.pkl")
                 prediction = model.predict(data)
                 st.write("Predicted Price (Per KG) :" + " " + "₹" + " " + str(np.round(prediction[0], 2)))
@@ -151,8 +150,7 @@ Agrigravity Technologies Private Limited's Corporate Identification Number is (C
 
                 st.write(user_input_data)
                 st.subheader("Predicted Price (Per KG)")
-                data = np.array(feature_list)
-                data = data.reshape(1, -1)
+                data = np.array(feature_list).reshape(1, -1)
                 model = load_model("final_model4.pkl")
                 prediction = model.predict(data)
                 st.write("Predicted Price (Per KG) :" + " " + "₹" + " " + str(np.round(prediction[0], 2)))
